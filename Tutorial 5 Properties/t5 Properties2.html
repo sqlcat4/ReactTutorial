@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <Title>Simple Demo</Title>
+        
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+<body>
+
+    <div id="app"></div>
+
+    <script type="text/babel"> //jsx
+
+    // component start
+
+        class Movie extends React.Component{
+            render(){
+                return (
+                    <div> 
+                        <h1>{this.props.title}</h1>
+                        <h2>{this.props.genre}</h2>
+                
+
+                        </div>
+                );
+            }
+        };
+
+        // component end, {this.props.props_name} calls te defined properties
+      
+// "title" and "genre" is custom properties you can define
+        ReactDOM.render(
+        <div>
+            <Movie title="Avatar" genre="action" />
+            <Movie title="Capt America" genre="action" />
+            <Movie title="The Conjuring" genre="Horror" />
+
+            </div>    
+        , document.getElementById("app"))
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <Title>Simple Demo</Title>
+        
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+<body>
+
+    <div id="exm"></div>
+
+    <script type="text/babel"> //jsx
+        class Bacon extends React.Component{
+            render (){
+                return(   // Every single component can only return 1 Parent Elemnt <div> *content *</div>
+                        <div> 
+                        <h2>try it out, this is component </h2>
+                        <p> I am some sample Text</p>
+                        </div>
+                    ); 
+            }
+        };
+
+        // if you want to return more than one, use <div></div>
+        ReactDOM.render(<div> 
+            <Bacon />
+            <Bacon />    
+            <Bacon />
+            </div>
+            , document.getElementById("exm"))
+    </script>
+
+</body>
+</html>
